@@ -77,21 +77,6 @@ const listBuckets = (req, res) => {
   }
 };
 
-// const deleteBucket = (req, res) => {
-//   let criteria = {
-//     name: req.params.name,
-//   };
-//   try {
-//     bucket.deleteBucket(criteria, (err, result) => {
-//       if (err) {
-//         return res.status(500).json({ error: "Internal server error" });
-//       }
-//       res.json({ message: "Bucket deleted successfully" });
-//     });
-//   } catch (error) {
-//     res.status(500).json({ error: "Internal server error" });
-//   }
-// };
 
 const deleteBucket = (req, res) => {
   let criteria = {
