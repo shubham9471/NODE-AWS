@@ -12,23 +12,7 @@ const bucketService = require("../Services/bucketService");
 
 // Create object handler
 const createObject = (req, res) => {
-  // Establish MongoDB Connection
-  const uri =
-    "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
-  const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
 
-  // Connect to MongoDB
-  client.connect((err) => {
-    if (err) {
-      console.error("Error connecting to MongoDB Atlas:", err);
-      return;
-    }
-
-    console.log("Connected to MongoDB Atlas");
-  });
 
   // Use the database instance for GridFSBucket
   const dbName = "test";
